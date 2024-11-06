@@ -1,5 +1,7 @@
 #Enviroment
-
+AI_SERVICE_ENDPOINT=your_azure_ai_services_endpoint
+AI_SERVICE_KEY=your_azure_ai_services_keyfrom dotenv import load_dotenv
+#Image-Text-Detecter
 from dotenv import load_dotenv
 import os
 import time
