@@ -160,6 +160,7 @@ Ensure your Azure endpoint and key are correct in the .env file and that your im
 
 
 #Hiking Assistant with Azure OpenAI
+
 This project implements a hiking assistant chatbot using the Azure OpenAI service. The assistant, named "Forest," helps users discover hiking trails nearby and offers nature insights about the trails. It is set up to provide suggestions for hikes near Rainier National Park if no specific location is given.
 
 Features
