@@ -157,3 +157,64 @@ Matplotlib: Displays and saves annotated images.
 Requests: Makes HTTP requests for background removal.
 Troubleshooting
 Ensure your Azure endpoint and key are correct in the .env file and that your image file exists in the specified path. Also, verify the correct permissions for your Azure resource and subscription.
+
+
+#Hiking Assistant with Azure OpenAI
+This project implements a hiking assistant chatbot using the Azure OpenAI service. The assistant, named "Forest," helps users discover hiking trails nearby and offers nature insights about the trails. It is set up to provide suggestions for hikes near Rainier National Park if no specific location is given.
+
+Features
+Conversational Interface: Interact with "Forest" through a chat-style interface where you can ask for hiking suggestions.
+Customizable Recommendations: If no area is specified, Forest defaults to recommending hikes near Rainier National Park.
+Diverse Hiking Options: Forest suggests three hikes with varying lengths for a tailored experience.
+Local Nature Facts: Get interesting facts about the local flora and fauna on each hike.
+Requirements
+Python 3.x
+Azure OpenAI Service: An active subscription with access to an OpenAI deployment on Azure.
+Setup Instructions
+Clone the Repository:
+
+bash
+Copy code
+git clone <repository-link>
+cd <repository-name>
+Install Dependencies:
+
+Install Python dependencies using pip:
+bash
+Copy code
+pip install openai python-dotenv
+Create an .env File:
+
+In the root directory of your project, create a .env file with the following configuration:
+
+plaintext
+Copy code
+AZURE_OAI_ENDPOINT="your_azure_openai_endpoint"
+AZURE_OAI_KEY="your_azure_openai_key"
+AZURE_OAI_DEPLOYMENT="your_azure_openai_deployment_name"
+Replace your_azure_openai_endpoint, your_azure_openai_key, and your_azure_openai_deployment_name with the values provided by your Azure account.
+
+Run the Application:
+
+Start the application by running:
+
+bash
+Copy code
+python main.py
+Enter prompts to receive hiking recommendations from "Forest."
+
+Code Overview
+main.py: This file contains the main application logic for interacting with the Azure OpenAI API.
+load_dotenv(): Loads environment variables from the .env file.
+AzureOpenAI: Connects to the Azure OpenAI endpoint using the provided credentials.
+system_message: Initializes the chatbot personality with background and context for hiking recommendations.
+Main Loop: Accepts user input, generates a response through the OpenAI model, and prints the chatbot's response.
+Example Usage
+plaintext
+Copy code
+Enter the prompt (or type 'quit' to exit): Can you suggest a hike for me?
+Sending request for summary to Azure OpenAI endpoint...
+
+Summary: Here are three fantastic hikes for you near Rainier National Park...
+Error Handling
+The code includes basic error handling, printing any exceptions that occur during execution.
