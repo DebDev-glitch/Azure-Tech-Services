@@ -2,7 +2,7 @@
 AI_SERVICE_ENDPOINT="https://xxxxxxxx-ai.cognitiveservices.azure.com/"
 AI_SERVICE_KEY="1eSGkCCwtpPACilHfWlhuBd3zR9lkTfb9fT4xcClAD6P6MoY9qrvJQQJ99AKACYeBjFXJ3w3AAAaAxxxxxxx"
 QA_PROJECT_NAME=LearnFAQ
-QA_DEPLOYMENT_NAME=subhasish29ai
+QA_DEPLOYMENT_NAME=debasish29ai
 
 #code file for Create a Question Answering Solution
 from dotenv import load_dotenv
